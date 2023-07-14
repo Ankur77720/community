@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css' rel='stylesheet' />
+  <link rel="stylesheet" href="/stylesheets/bookDetails.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="main">
+    <div class="navbar">
+      <div class="left">
+        <i onclick="window.history.back()" class="ri-arrow-left-circle-fill"></i>
+        <p>Book details</p>
+      </div>
+      <div class="right"></div>
+    </div>
+    <div class="bookImage">
+      <img src="/images/uploads/<%= book.images %>" alt="">
+    </div>
+    <div class="bookTitle">
+      <h1><%= book.title %></h1>
+    </div>
+    <div class="class-board">
+      <small><%= book.class %></small> | <small><%= book.board %></small>
+    </div>
+    <div class="desc">
+      <%= book.desc %>
+    </div>
+    <hr>
+    <div class="owner">
+      <h2>Owner</h2>
+      <h1><%= book.owner.username %></h1>
+      <h1> <a href="tel:<%=book.owner.contactNumber%>"> <%= book.owner.contactNumber %> </a></h1>
+      <h1><%= book.owner.email %></h1>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/addBook.css">
+  <link href='https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css' rel='stylesheet' />
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="main">
+    <div class="navbar">
+      <div class="left">
+        <i onclick="history.back()" class="ri-arrow-left-circle-fill"></i>
+        <p>Add Book</p>
+      </div>
+      <div class="right"></div>
+    </div>
+    <form action="" class="details" method="post" enctype="multipart/form-data">
+      <div class="inputfield">
+        <label for="title">Title</label>
+        <input id="title" type="text" name="title" placeholder="Enter title of book">
+      </div>
+      <div class="inputfield">
+        <label for="class">Class</label>
+        <input id="class" type="text" name="class" placeholder="Enter class for Book">
+      </div>
+      <div class="inputfield">
+        <label for="board">Board</label>
+        <input id="board" type="text" name="board" placeholder="Enter Board for Book">
+      </div>
+      <div class="inputfield">
+        <label for="desc">Description of book</label>
+        <textarea id="desc" name="desc" placeholder="Description of book eg: The book is slightly tear from sides but text is cearly visible"></textarea>
+      </div>
+      <div class="inputfield">
+        <label for="image">Image of Book</label>
+        <input id="image" type="file" name="image" placeholder="Image of book"></input>
+      </div>
+      <input id="addBook" type="submit" value="Add Book">
+    </form>
+
+  </div>
+</body>
+
+</html>

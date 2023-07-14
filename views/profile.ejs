@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css' rel='stylesheet' />
+  <link rel="stylesheet" href="/stylesheets/profile.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="main">
+    <div class="navbar">
+      <div class="left">
+        <i onclick="history.back()" class="ri-arrow-left-circle-fill"></i>
+        <p>Profile</p>
+      </div>
+
+      <div class="right"></div>
+    </div>
+    <div class="userDetails">
+      <div class="left">
+        <i class="ri-pencil-fill"></i>
+      </div>
+      <div class="right">
+        <h1><%= currentUser.username %></h1>
+        <p><%= currentUser.email %></p>
+      </div>
+    </div>
+    <form class="editDetails">
+      <input type="contactNumber" value="<%= currentUser.contactNumber %>">
+    </form>
+    <hr>
+    <div class="title">
+      Added books
+    </div>
+    <div class="addedBooks">
+      <% currentUser.books.forEach(book=>{ %>
+      <div class="book">
+        <div class="left">
+          <img src="/images/uploads/<%= book.images %>" alt="">
+        </div>
+        <div class="right">
+          <div class="text">
+            <div class="title">
+              <h3><%= book.title %></h3>
+              <small><%= book.class %></small>
+            </div>
+            <small><%= book.board %></small>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+    <a href="/logout" class="logout">
+      Logout
+    </a>
+  </div>
+
+</body>
+
+</html>
