@@ -1,6 +1,6 @@
 {
-    "name": "Random",
-    "short_name": "random",
+    "name": "Bookeverse",
+    "short_name": "bookverse",
     "description": "A platform for sharing books who needs it",
     "start_url": "/",
     "display": "standalone",

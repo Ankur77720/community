@@ -11,7 +11,7 @@ passport.use(new localStrategy(users.authenticate()))
 const mongoose = require('mongoose')
 
 
-mongoose.connect("mongodb://0.0.0.0/random").then(result => {
+mongoose.connect("mongodb+srv://0126cy201015:Z7c3BEovqWkbuap2@cluster0.fe3gtyi.mongodb.net/").then(result => {
   console.log("Connected to database")
 }).catch(err => {
   console.log(err)
